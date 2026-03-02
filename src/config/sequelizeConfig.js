@@ -1,18 +1,12 @@
 require('dotenv').config();
 const { Sequelize } = require('sequelize');
 
-require("dotenv").config();
-const { Sequelize } = require("sequelize");
-
-if (!process.env.DATABASE_URL) {
-  console.error("❌ DATABASE_URL is missing");
-  process.exit(1);
-}
-
-const sequelize = new Sequelize(process.env.DATABASE_URL, {
-  dialect: "mysql",
-  logging: false,
-});
+const sequelize = new Sequelize(
+  process.env.DB_NAME || 'mysql://root:UlBhfOXxhbrUIbgdzwiYSjFZriWAnAPJ@mysql.railway.internal:3306/railway',
+  {
+    dialect: "mysql",
+  }
+);
 
 
 // const sequelize = new Sequelize(
