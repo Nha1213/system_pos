@@ -2,7 +2,7 @@ require('dotenv').config();
 const { Sequelize } = require('sequelize');
 
 const sequelize = new Sequelize(
-  process.env.DB_NAME || 'mysql://root:TfUanObypFpNAxTAEPMvGaqsIEOFbevG@mysql.railway.internal:3306/railway',
+  process.env.DB_NAME || 'mysql://root:UlBhfOXxhbrUIbgdzwiYSjFZriWAnAPJ@mysql.railway.internal:3306/railway',
   {
     dialect: "mysql",
   }
